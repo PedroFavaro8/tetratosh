@@ -1,5 +1,7 @@
 # TETRATOSH
 
+# credits for opencore project because i use opencore on the chainload
+
 Automated Hackintosh Bootloader - A fully automatic bootloader that prepares a Hackintosh environment before launching OpenCore.
 
 ## Build Status
