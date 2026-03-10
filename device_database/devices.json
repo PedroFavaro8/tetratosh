@@ -1,0 +1,542 @@
+{
+  "devices": [
+    {
+      "name": "Intel UHD Graphics 630",
+      "vendor_id": "8086",
+      "device_id": "5912",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Intel HD Graphics 630 - Coffee Lake"
+    },
+    {
+      "name": "Intel UHD Graphics 620",
+      "vendor_id": "8086",
+      "device_id": "591D",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Intel HD Graphics 620 - Kaby Lake"
+    },
+    {
+      "name": "Intel Iris Plus Graphics 640",
+      "vendor_id": "8086",
+      "device_id": "5927",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Intel Iris Plus Graphics 640"
+    },
+    {
+      "name": "Intel Iris Xe Graphics",
+      "vendor_id": "8086",
+      "device_id": "8A70",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Intel Xe Graphics - Tiger Lake"
+    },
+    {
+      "name": "NVIDIA GeForce GTX 1080",
+      "vendor_id": "10DE",
+      "device_id": "1B80",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Requires web drivers"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "vendor_id": "10DE",
+      "device_id": "1F10",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Turing - requires web drivers"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3080",
+      "vendor_id": "10DE",
+      "device_id": "2204",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Ampere - requires web drivers"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "vendor_id": "10DE",
+      "device_id": "2684",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Ada Lovelace - requires web drivers"
+    },
+    {
+      "name": "AMD Radeon RX 570",
+      "vendor_id": "1002",
+      "device_id": "67DF",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Polaris"
+    },
+    {
+      "name": "AMD Radeon RX 590",
+      "vendor_id": "1002",
+      "device_id": "67DF",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Polaris"
+    },
+    {
+      "name": "AMD Radeon RX 5700 XT",
+      "vendor_id": "1002",
+      "device_id": "67DF",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "Navi"
+    },
+    {
+      "name": "AMD Radeon RX 6800 XT",
+      "vendor_id": "1002",
+      "device_id": "73BF",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "RDNA 2"
+    },
+    {
+      "name": "AMD Radeon RX 7900 XTX",
+      "vendor_id": "1002",
+      "device_id": "744C",
+      "class_code": "03",
+      "subclass": "00",
+      "kext": "WhateverGreen.kext",
+      "notes": "RDNA 3"
+    },
+    {
+      "name": "Intel I219-V Ethernet",
+      "vendor_id": "8086",
+      "device_id": "15B7",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "IntelMausi.kext",
+      "notes": "Intel I219-V"
+    },
+    {
+      "name": "Intel I219-LM Ethernet",
+      "vendor_id": "8086",
+      "device_id": "15B8",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "IntelMausi.kext",
+      "notes": "Intel I219-LM"
+    },
+    {
+      "name": "Intel I225-V Ethernet",
+      "vendor_id": "8086",
+      "device_id": "15F3",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "IntelMausi.kext",
+      "notes": "Intel I225-V - Comet Lake"
+    },
+    {
+      "name": "Intel I226-V Ethernet",
+      "vendor_id": "8086",
+      "device_id": "15F7",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "IntelMausi.kext",
+      "notes": "Intel I226-V - Tiger Lake"
+    },
+    {
+      "name": "Realtek RTL8111/8168",
+      "vendor_id": "10EC",
+      "device_id": "8168",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "RealtekRTL8111.kext",
+      "notes": "Realtek RTL8111/8168"
+    },
+    {
+      "name": "Realtek RTL8125",
+      "vendor_id": "10EC",
+      "device_id": "8125",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "RealtekRTL8125.kext",
+      "notes": "Realtek RTL8125 2.5GbE"
+    },
+    {
+      "name": "Realtek RTL8152",
+      "vendor_id": "10EC",
+      "device_id": "8152",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "RealtekRTL8152.kext",
+      "notes": "Realtek RTL8152 USB"
+    },
+    {
+      "name": "Broadcom BCM57781",
+      "vendor_id": "14E4",
+      "device_id": "57781",
+      "class_code": "02",
+      "subclass": "00",
+      "kext": "AppleBCM5701.kext",
+      "notes": "Broadcom BCM57781"
+    },
+    {
+      "name": "Intel Wi-Fi 6 AX200",
+      "vendor_id": "8086",
+      "device_id": "2723",
+      "class_code": "0D",
+      "subclass": "80",
+      "kext": "AirportItlwm.kext",
+      "requires": ["IntelBluetoothFirmware.kext"],
+      "notes": "Intel AX200 Wi-Fi"
+    },
+    {
+      "name": "Intel Wi-Fi 6 AX201",
+      "vendor_id": "8086",
+      "device_id": "34FE",
+      "class_code": "0D",
+      "subclass": "80",
+      "kext": "AirportItlwm.kext",
+      "requires": ["IntelBluetoothFirmware.kext"],
+      "notes": "Intel AX201 Wi-Fi"
+    },
+    {
+      "name": "Intel Wi-Fi 6E AX210",
+      "vendor_id": "8086",
+      "device_id": "2725",
+      "class_code": "0D",
+      "subclass": "80",
+      "kext": "AirportItlwm.kext",
+      "requires": ["IntelBluetoothFirmware.kext"],
+      "notes": "Intel AX210 Wi-Fi"
+    },
+    {
+      "name": "Broadcom Wi-Fi",
+      "vendor_id": "14E4",
+      "device_id": "43A0",
+      "class_code": "0D",
+      "subclass": "80",
+      "kext": "AirportBrcmFixup.kext",
+      "notes": "Broadcom Wi-Fi"
+    },
+    {
+      "name": "Realtek Wi-Fi",
+      "vendor_id": "10EC",
+      "device_id": "C822",
+      "class_code": "0D",
+      "subclass": "80",
+      "kext": "AirportItlwm.kext",
+      "notes": "Realtek Wi-Fi"
+    },
+    {
+      "name": "Intel Bluetooth",
+      "vendor_id": "8086",
+      "device_id": "7AAA",
+      "class_code": "0D",
+      "subclass": "10",
+      "kext": "IntelBluetoothFirmware.kext",
+      "notes": "Intel Bluetooth"
+    },
+    {
+      "name": "Broadcom Bluetooth",
+      "vendor_id": "14E4",
+      "device_id": "5E12",
+      "class_code": "0D",
+      "subclass": "10",
+      "kext": "BrcmPatchRAM.kext",
+      "notes": "Broadcom Bluetooth"
+    },
+    {
+      "name": "Realtek ALC1220",
+      "vendor_id": "10EC",
+      "device_id": "1220",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "7",
+      "notes": "Realtek ALC1220"
+    },
+    {
+      "name": "Realtek ALC1220A",
+      "vendor_id": "10EC",
+      "device_id": "1220",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "0C",
+      "notes": "Realtek ALC1220A"
+    },
+    {
+      "name": "Realtek ALC887",
+      "vendor_id": "10EC",
+      "device_id": "0887",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "11",
+      "notes": "Realtek ALC887"
+    },
+    {
+      "name": "Realtek ALC892",
+      "vendor_id": "10EC",
+      "device_id": "0892",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "04",
+      "notes": "Realtek ALC892"
+    },
+    {
+      "name": "Realtek ALC269",
+      "vendor_id": "10EC",
+      "device_id": "0269",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "03",
+      "notes": "Realtek ALC269"
+    },
+    {
+      "name": "Realtek ALC285",
+      "vendor_id": "10EC",
+      "device_id": "0285",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "17",
+      "notes": "Realtek ALC285"
+    },
+    {
+      "name": "Conexant CX20751/2",
+      "vendor_id": "14F1",
+      "device_id": "510F",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "28",
+      "notes": "Conexant CX20751/2"
+    },
+    {
+      "name": "VIA VT2021",
+      "vendor_id": "1106",
+      "device_id": "3289",
+      "class_code": "04",
+      "subclass": "03",
+      "kext": "AppleALC.kext",
+      "layout_id": "09",
+      "notes": "VIA VT2021"
+    },
+    {
+      "name": "Intel NVMe Controller",
+      "vendor_id": "8086",
+      "device_id": "5001",
+      "class_code": "01",
+      "subclass": "08",
+      "kext": "NVMeFix.kext",
+      "notes": "Intel NVMe"
+    },
+    {
+      "name": "Samsung NVMe Controller",
+      "vendor_id": "144D",
+      "device_id": "A808",
+      "class_code": "01",
+      "subclass": "08",
+      "kext": "NVMeFix.kext",
+      "notes": "Samsung NVMe"
+    },
+    {
+      "name": "AMD NVMe Controller",
+      "vendor_id": "1022",
+      "device_id": "5001",
+      "class_code": "01",
+      "subclass": "08",
+      "kext": "NVMeFix.kext",
+      "notes": "AMD NVMe"
+    },
+    {
+      "name": "Intel AHCI Controller",
+      "vendor_id": "8086",
+      "device_id": "2829",
+      "class_code": "01",
+      "subclass": "06",
+      "kext": null,
+      "notes": "Intel AHCI - native driver"
+    },
+    {
+      "name": "AMD AHCI Controller",
+      "vendor_id": "1022",
+      "device_id": "7801",
+      "class_code": "01",
+      "subclass": "06",
+      "kext": null,
+      "notes": "AMD AHCI - native driver"
+    }
+  ],
+  
+  "cpu_compatibility": {
+    "Intel": {
+      "Skylake": {
+        "min_year": 2015,
+        "smbios": "iMac17,1",
+        "ig_platform_id": "0x19160000",
+        "cpu_generation": 6
+      },
+      "KabyLake": {
+        "min_year": 2017,
+        "smbios": "iMac18,1",
+        "ig_platform_id": "0x59160000",
+        "cpu_generation": 7
+      },
+      "CoffeeLake": {
+        "min_year": 2018,
+        "smbios": "iMac19,1",
+        "ig_platform_id": "0x3EA50000",
+        "cpu_generation": 8
+      },
+      "CometLake": {
+        "min_year": 2019,
+        "smbios": "iMac19,1",
+        "ig_platform_id": "0x3E9B0000",
+        "cpu_generation": 9
+      },
+      "IceLake": {
+        "min_year": 2019,
+        "smbios": "MacBookPro16,4",
+        "ig_platform_id": "0x8A500000",
+        "cpu_generation": 10
+      },
+      "RocketLake": {
+        "min_year": 2020,
+        "smbios": "iMac20,2",
+        "ig_platform_id": "0x9A600000",
+        "cpu_generation": 11
+      },
+      "AlderLake": {
+        "min_year": 2021,
+        "smbios": "MacBookPro18,1",
+        "ig_platform_id": "0x9A840000",
+        "cpu_generation": 12
+      }
+    },
+    "AMD": {
+      "Zen": {
+        "min_year": 2017,
+        "smbios": "MacPro7,1",
+        "cpu_family": "0x01"
+      },
+      "Zen+": {
+        "min_year": 2018,
+        "smbios": "MacPro7,1",
+        "cpu_family": "0x01"
+      },
+      "Zen2": {
+        "min_year": 2019,
+        "smbios": "MacPro7,1",
+        "cpu_family": "0x01"
+      },
+      "Zen3": {
+        "min_year": 2020,
+        "smbios": "MacPro7,1",
+        "cpu_family": "0x01"
+      },
+      "Zen4": {
+        "min_year": 2022,
+        "smbios": "MacPro7,1",
+        "cpu_family": "0x01"
+      }
+    }
+  },
+  
+  "smbios_compatibility": [
+    {
+      "cpu_type": "Intel-CoffeeLake",
+      "product_name": "iMac19,1",
+      "board_product": "Mac-9415B9B5EE2EE06B",
+      "year": 2019,
+      "mem_slots": 4,
+      "max_ram": 64,
+      "gpu_slots": 2
+    },
+    {
+      "cpu_type": "Intel-CometLake",
+      "product_name": "iMac19,1",
+      "board_product": "Mac-9415B9B5EE2EE06B",
+      "year": 2019,
+      "mem_slots": 4,
+      "max_ram": 64,
+      "gpu_slots": 2
+    },
+    {
+      "cpu_type": "Intel-IceLake",
+      "product_name": "MacBookPro16,4",
+      "board_product": "Mac-827FB896E0B1B64B",
+      "year": 2019,
+      "mem_slots": 2,
+      "max_ram": 32,
+      "gpu_slots": 1
+    },
+    {
+      "cpu_type": "Intel-RocketLake",
+      "product_name": "iMac20,2",
+      "board_product": "Mac-27AD2F046AE3778C",
+      "year": 2020,
+      "mem_slots": 4,
+      "max_ram": 128,
+      "gpu_slots": 2
+    },
+    {
+      "cpu_type": "Intel-AlderLake",
+      "product_name": "MacBookPro18,1",
+      "board_product": "Mac-E43C1C3B3A6BF2E8",
+      "year": 2021,
+      "mem_slots": 2,
+      "max_ram": 64,
+      "gpu_slots": 1
+    },
+    {
+      "cpu_type": "AMD-Zen",
+      "product_name": "MacPro7,1",
+      "board_product": "Mac-551F86F84AE2B",
+      "year": 2019,
+      "mem_slots": 8,
+      "max_ram": 256,
+      "gpu_slots": 2
+    },
+    {
+      "cpu_type": "AMD-Zen2",
+      "product_name": "MacPro7,1",
+      "board_product": "Mac-551F86F84AE2B",
+      "year": 2019,
+      "mem_slots": 8,
+      "max_ram": 256,
+      "gpu_slots": 2
+    },
+    {
+      "cpu_type": "AMD-Zen3",
+      "product_name": "MacPro7,1",
+      "board_product": "Mac-551F86F84AE2B",
+      "year": 2020,
+      "mem_slots": 8,
+      "max_ram": 256,
+      "gpu_slots": 2
+    },
+    {
+      "cpu_type": "AMD-Zen4",
+      "product_name": "MacPro7,1",
+      "board_product": "Mac-551F86F84AE2B",
+      "year": 2022,
+      "mem_slots": 8,
+      "max_ram": 256,
+      "gpu_slots": 2
+    }
+  ]
+}
