@@ -82,5 +82,5 @@ TETRATOSH/
 ## Credits
 
 - OpenCore Team
-- Acidanthera (Lilu, WhateverGreen, AppleALC)
+- Acidanthera (Lilu, WhateverGreen, AppleALC , etc)
 - EDK2 Project
