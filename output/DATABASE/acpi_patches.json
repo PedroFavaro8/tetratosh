@@ -1,0 +1,723 @@
+{
+  "version": "1.0",
+  "description": "Complete ACPI patches database for maximum compatibility",
+  
+  "ssdt_templates": {
+    "SSDT-PLUG": {
+      "description": "CPU power management plugin",
+      "target_cpu": ["Intel", "AMD"],
+      "content_base": "SSDT-PLUG.dat"
+    },
+    "SSDT-EC": {
+      "description": "Embedded Controller fix",
+      "target_cpu": ["Intel"],
+      "content_base": "SSDT-EC.dat"
+    },
+    "SSDT-EC-USBX": {
+      "description": "EC and USB power",
+      "target_cpu": ["Intel"],
+      "content_base": "SSDT-EC-USBX.dat"
+    },
+    "SSDT-PMC": {
+      "description": "PMC fix for Intel",
+      "target_cpu": ["Intel"],
+      "content_base": "SSDT-PMC.dat"
+    },
+    "SSDT-AWAC": {
+      "description": "RTC fix for Intel 300 series",
+      "target_cpu": ["Intel"],
+      "content_base": "SSDT-AWAC.dat"
+    },
+    "SSDT-USB-Reset": {
+      "description": "USB reset fix",
+      "target_cpu": ["Intel", "AMD"],
+      "content_base": "SSDT-USB-Reset.dat"
+    },
+    "SSDT-XOSI": {
+      "description": "OSI workaround",
+      "target_cpu": ["AMD"],
+      "content_base": "SSDT-XOSI.dat"
+    },
+    "SSDT-AGESA": {
+      "description": "AMD AGESA fix",
+      "target_cpu": ["AMD"],
+      "content_base": "SSDT-AGESA.dat"
+    },
+    "SSDT-AMD-CPU-PM": {
+      "description": "AMD CPU power management",
+      "target_cpu": ["AMD"],
+      "content_base": "SSDT-AMD-CPU-PM.dat"
+    }
+  },
+  
+  "acpi_patches": {
+    "cpu_patches": [
+      {
+        "name": "Rename CP00 to CP00",
+        "description": "CPU rename for AppleXcpm",
+        "find": "43503030",
+        "replace": "43503030",
+        "target": "DSDT",
+        "cpu": "Intel"
+      },
+      {
+        "name": "CPU PM patch for Sandy Bridge",
+        "description": "Enable XCPM for Sandy Bridge",
+        "find": "00A00F3C",
+        "replace": "00A01B3C",
+        "target": "DSDT",
+        "cpu": "Intel-SandyBridge"
+      },
+      {
+        "name": "CPU PM patch for Ivy Bridge",
+        "description": "Enable XCPM for Ivy Bridge",
+        "find": "00A00F3C",
+        "replace": "00A01B3C",
+        "target": "DSDT",
+        "cpu": "Intel-IvyBridge"
+      },
+      {
+        "name": "CPU PM patch for Haswell",
+        "description": "Enable XCPM for Haswell",
+        "find": "00A00F3C",
+        "replace": "00A01B3C",
+        "target": "DSDT",
+        "cpu": "Intel-Haswell"
+      },
+      {
+        "name": "CPU PM patch for Skylake",
+        "description": "Enable XCPM for Skylake",
+        "find": "00A00F3C",
+        "replace": "00A01B3C",
+        "target": "DSDT",
+        "cpu": "Intel-Skylake"
+      },
+      {
+        "name": "CPU XCPM for Haswell-E",
+        "description": "Haswell-E XCPM patch",
+        "find": "00A00F3C",
+        "replace": "00A01B3C",
+        "target": "DSDT",
+        "cpu": "Intel-HaswellE"
+      },
+      {
+        "name": "CPU XCPM for Broadwell-E",
+        "description": "Broadwell-E XCPM patch",
+        "find": "00A00F3C",
+        "replace": "00A01B3C",
+        "target": "DSDT",
+        "cpu": "Intel-BroadwellE"
+      },
+      {
+        "name": "AMD CPU power management",
+        "description": "AMD CPU PM patch",
+        "find": "415MADT00",
+        "replace": "41534D50",
+        "target": "DSDT",
+        "cpu": "AMD"
+      }
+    ],
+    
+    "gpu_patches": [
+      {
+        "name": "Rename GFX0 to IGPU",
+        "description": "Intel GPU rename",
+        "find": "47465830",
+        "replace": "49475055",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename PEGP to GFX0",
+        "description": "External GPU rename",
+        "find": "50454750",
+        "replace": "47465830",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename HECI to IMEI",
+        "description": "Intel Management Engine",
+        "find": "48454349",
+        "replace": "494D4549",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename HECI1 to IMEI",
+        "description": "Intel ME rename alternate",
+        "find": "4845434931",
+        "replace": "494D454931",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Intel HD Graphics 3000",
+        "description": "HD 3000 patch",
+        "find": "00A01D10",
+        "replace": "00A02110",
+        "target": "DSDT",
+        "cpu": "Intel-SandyBridge"
+      },
+      {
+        "name": "Intel HD Graphics 4000",
+        "description": "HD 4000 patch",
+        "find": "00A01D10",
+        "replace": "00A02110",
+        "target": "DSDT",
+        "cpu": "Intel-IvyBridge"
+      },
+      {
+        "name": "Intel HD Graphics 4600",
+        "description": "HD 4600 patch",
+        "find": "00A01D10",
+        "replace": "00A02110",
+        "target": "DSDT",
+        "cpu": "Intel-Haswell"
+      },
+      {
+        "name": "Intel Iris Pro 5200",
+        "description": "Iris Pro 5200 patch",
+        "find": "00A01D10",
+        "replace": "00A02110",
+        "target": "DSDT",
+        "cpu": "Intel-Broadwell"
+      }
+    ],
+    
+    "audio_patches": [
+      {
+        "name": "Rename HDEF to HDAS",
+        "description": "Audio controller rename",
+        "find": "48444546",
+        "replace": "48444153",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename B0D3 to HDAU",
+        "description": "Audio GPU codec",
+        "find": "42304433",
+        "replace": "48444155",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename ALZA to HDAU",
+        "description": "Realtek ALC patch",
+        "find": "414C5A41",
+        "replace": "48444155",
+        "target": "DSDT",
+        "all": true
+      }
+    ],
+    
+    "network_patches": [
+      {
+        "name": "Rename GBE to ETH0",
+        "description": "Gigabit Ethernet rename",
+        "find": "47424530",
+        "replace": "45544830",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename GLAN to ETH1",
+        "description": "LAN rename",
+        "find": "474C414E",
+        "replace": "45544831",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename ARPT to WIFI",
+        "description": "Wireless rename",
+        "find": "41525054",
+        "replace": "57494649",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename ARWN to WIFI",
+        "description": "Wireless alternate",
+        "find": "4152574E",
+        "replace": "57494649",
+        "target": "DSDT",
+        "all": true
+      }
+    ],
+    
+    "usb_patches": [
+      {
+        "name": "Rename EHC1 to EH01",
+        "description": "USB EHCI rename",
+        "find": "45484331",
+        "replace": "45483031",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename EHC2 to EH02",
+        "description": "USB EHCI 2 rename",
+        "find": "45484332",
+        "replace": "45483032",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename XHC1 to XHC1",
+        "description": "USB XHCI rename",
+        "find": "58484331",
+        "replace": "58484331",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename XHCI to XHC",
+        "description": "USB XHCI short",
+        "find": "58484369",
+        "replace": "58484320",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "USB fix for Sandy Bridge",
+        "description": "USB power management",
+        "find": "00A0C0A0",
+        "replace": "00A0C1A0",
+        "target": "DSDT",
+        "cpu": "Intel-SandyBridge"
+      }
+    ],
+    
+    "storage_patches": [
+      {
+        "name": "Rename SATA to IDE",
+        "description": "SATA to IDE legacy",
+        "find": "53415441",
+        "replace": "49444520",
+        "target": "DSDT",
+        "all": true
+      },
+      {
+        "name": "Rename AHCIM to AHCI",
+        "description": "AHCI fix",
+        "find": "41484349",
+        "replace": "41484349",
+        "target": "DSDT",
+        "all": true
+      }
+    ],
+    
+    "power_management_patches": [
+      {
+        "name": "PMCR Patch",
+        "description": "PMCR register access",
+        "find": "504D4352",
+        "replace": "504D4352",
+        "target": "DSDT",
+        "cpu": "Intel"
+      },
+      {
+        "name": "PNVM Patch",
+        "description": "PNVM fix",
+        "find": "504E564D",
+        "replace": "504E564D",
+        "target": "DSDT",
+        "cpu": "Intel"
+      },
+      {
+        "name": "PMC fix for 100/200 series",
+        "description": "PMC enable",
+        "find": "01A00000",
+        "replace": "01A00C00",
+        "target": "DSDT",
+        "cpu": "Intel-Skylake"
+      },
+      {
+        "name": "PMC fix for 300 series",
+        "description": "PMC enable 300 series",
+        "find": "01A00000",
+        "replace": "01A00C00",
+        "target": "DSDT",
+        "cpu": "Intel-CoffeeLake"
+      }
+    ],
+    
+    "clock_patches": [
+      {
+        "name": "RTC fix for 100/200 series",
+        "description": "RTC patch",
+        "find": "00A80000",
+        "replace": "00A80400",
+        "target": "DSDT",
+        "cpu": "Intel-Skylake"
+      },
+      {
+        "name": "RTC fix for 300 series",
+        "description": "AWAC fix",
+        "find": "00A80000",
+        "replace": "00A80400",
+        "target": "DSDT",
+        "cpu": "Intel-CoffeeLake"
+      },
+      {
+        "name": "AWAC fix",
+        "description": "AWAC clock",
+        "find": "41574143",
+        "replace": "53424335",
+        "target": "DSDT",
+        "cpu": "Intel"
+      }
+    ]
+  },
+  
+  "cpu_compatibility": {
+    "Intel": {
+      "Nehalem": {
+        "min_year": 2008,
+        "max_year": 2011,
+        "cpuid": ["0x10600", "0x10650"],
+        "smbios": "MacPro5,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": true,
+          "AppleXcpmCfgLock": true
+        }
+      },
+      "Westmere": {
+        "min_year": 2010,
+        "max_year": 2011,
+        "cpuid": ["0x10650", "0x20650"],
+        "smbios": "MacPro5,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": true,
+          "AppleXcpmCfgLock": true
+        }
+      },
+      "SandyBridge": {
+        "min_year": 2011,
+        "max_year": 2012,
+        "cpuid": ["0x20600", "0x206A0"],
+        "smbios": "iMac12,2",
+        "ig_platform_id": "0x01010000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-USB-Reset"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": true
+        }
+      },
+      "IvyBridge": {
+        "min_year": 2012,
+        "max_year": 2013,
+        "cpuid": ["0x306A0", "0x306E0"],
+        "smbios": "iMac13,2",
+        "ig_platform_id": "0x01660000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-USB-Reset"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "Haswell": {
+        "min_year": 2013,
+        "max_year": 2014,
+        "cpuid": ["0x306C0", "0x306F0"],
+        "smbios": "iMac14,2",
+        "ig_platform_id": "0x04120000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "Broadwell": {
+        "min_year": 2014,
+        "max_year": 2015,
+        "cpuid": ["0x306D0", "0x306F0"],
+        "smbios": "iMac15,1",
+        "ig_platform_id": "0x16220000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-AWAC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "Skylake": {
+        "min_year": 2015,
+        "max_year": 2016,
+        "cpuid": ["0x40650", "0x406F0"],
+        "smbios": "iMac17,1",
+        "ig_platform_id": "0x19160000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "KabyLake": {
+        "min_year": 2016,
+        "max_year": 2017,
+        "cpuid": ["0x506E0", "0x506F0"],
+        "smbios": "iMac18,1",
+        "ig_platform_id": "0x59160000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "CoffeeLake": {
+        "min_year": 2017,
+        "max_year": 2019,
+        "cpuid": ["0x906E0", "0x906F0"],
+        "smbios": "iMac19,1",
+        "ig_platform_id": "0x3EA50000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC", "SSDT-AWAC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false,
+          "CpuTscSync": true
+        }
+      },
+      "CometLake": {
+        "min_year": 2019,
+        "max_year": 2020,
+        "cpuid": ["0xA0650", "0xA06F0"],
+        "smbios": "iMac20,1",
+        "ig_platform_id": "0x9A640000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC", "SSDT-AWAC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "IceLake": {
+        "min_year": 2019,
+        "max_year": 2020,
+        "cpuid": ["0x706E0", "0x706F0"],
+        "smbios": "MacBookPro16,4",
+        "ig_platform_id": "0x8A500000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false,
+          "CpuTscSync": true
+        }
+      },
+      "RocketLake": {
+        "min_year": 2020,
+        "max_year": 2021,
+        "cpuid": ["0xA0670", "0xA06F0"],
+        "smbios": "iMac21,1",
+        "ig_platform_id": "0x9A600000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC", "SSDT-AWAC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      },
+      "AlderLake": {
+        "min_year": 2021,
+        "max_year": 2024,
+        "cpuid": ["0x90670", "0x906F0"],
+        "smbios": "MacBookPro18,1",
+        "ig_platform_id": "0x9A840000",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-EC", "SSDT-EC-USBX", "SSDT-PMC", "SSDT-AWAC"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false
+        }
+      }
+    },
+    "AMD": {
+      "Bulldozer": {
+        "min_year": 2011,
+        "max_year": 2012,
+        "cpuid": ["0x00100F00"],
+        "smbios": "MacPro5,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "AppleXcpmCfgLock": false,
+          "ExternalDiskIcons": true
+        }
+      },
+      "Piledriver": {
+        "min_year": 2012,
+        "max_year": 2014,
+        "cpuid": ["0x00100F20"],
+        "smbios": "MacPro5,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true
+        }
+      },
+      "Excavator": {
+        "min_year": 2014,
+        "max_year": 2016,
+        "cpuid": ["0x00100F50"],
+        "smbios": "MacPro5,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true
+        }
+      },
+      "Zen": {
+        "min_year": 2017,
+        "max_year": 2019,
+        "cpuid": ["0x00800F00"],
+        "smbios": "MacPro7,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI", "SSDT-AGESA"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true,
+          "ThirdPartyDrives": true
+        }
+      },
+      "Zen+": {
+        "min_year": 2018,
+        "max_year": 2019,
+        "cpuid": ["0x00800F10"],
+        "smbios": "MacPro7,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI", "SSDT-AGESA"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true
+        }
+      },
+      "Zen2": {
+        "min_year": 2019,
+        "max_year": 2020,
+        "cpuid": ["0x00800F20"],
+        "smbios": "MacPro7,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI", "SSDT-AGESA"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true,
+          "XhciPortLimit": true
+        }
+      },
+      "Zen3": {
+        "min_year": 2020,
+        "max_year": 2022,
+        "cpuid": ["0x00800F30"],
+        "smbios": "MacPro7,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI", "SSDT-AGESA"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true
+        }
+      },
+      "Zen4": {
+        "min_year": 2022,
+        "max_year": 2024,
+        "cpuid": ["0x00800F40"],
+        "smbios": "MacPro7,1",
+        "ssdt_required": ["SSDT-PLUG", "SSDT-XOSI", "SSDT-AGESA"],
+        "quirks": {
+          "AppleCpuPmCfgLock": false,
+          "ExternalDiskIcons": true
+        }
+      }
+    }
+  },
+  
+  "quirks": {
+    "Intel-Nehalem": {
+      "AppleCpuPmCfgLock": true,
+      "AppleXcpmCfgLock": true,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": true,
+      "ResetHDA": true
+    },
+    "Intel-Westmere": {
+      "AppleCpuPmCfgLock": true,
+      "AppleXcpmCfgLock": true,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": true,
+      "ResetHDA": true
+    },
+    "Intel-SandyBridge": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": true,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": true,
+      "ResetHDA": true
+    },
+    "Intel-IvyBridge": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": true,
+      "ResetHDA": true
+    },
+    "Intel-Haswell": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false
+    },
+    "Intel-Broadwell": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false
+    },
+    "Intel-Skylake": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false,
+      "XhciPortLimit": true
+    },
+    "Intel-KabyLake": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false,
+      "XhciPortLimit": true
+    },
+    "Intel-CoffeeLake": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false,
+      "XhciPortLimit": true,
+      "CpuTscSync": true
+    },
+    "Intel-CometLake": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false,
+      "XhciPortLimit": true
+    },
+    "Intel-IceLake": {
+      "AppleCpuPmCfgLock": false,
+      "AppleXcpmCfgLock": false,
+      "LapicKernelPanic": false,
+      "ExternalDiskIcons": false,
+      "CpuTscSync": true
+    },
+    "AMD-Bulldozer": {
+      "ExternalDiskIcons": true,
+      "XhciPortLimit": true
+    },
+    "AMD-Zen": {
+      "ExternalDiskIcons": true,
+      "XhciPortLimit": true
+    },
+    "AMD-Zen2": {
+      "ExternalDiskIcons": true,
+      "XhciPortLimit": true
+    },
+    "AMD-Zen3": {
+      "ExternalDiskIcons": true,
+      "XhciPortLimit": true
+    }
+  }
+}
