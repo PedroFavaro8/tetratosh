@@ -6,7 +6,6 @@ Automated Hackintosh Bootloader - A fully automatic bootloader that prepares a H
 
 ## Build Status
 
-✅ **ISO PRONTA**: `Tetratosh.iso` (6.4MB)
 
 ## ISO Structure
 
