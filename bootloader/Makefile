@@ -13,13 +13,19 @@ TOOL_CHAIN = GCC5
 TOOL_CHAIN_TAG = GCC5
 
 # Paths
+<<<<<<< HEAD
 BOOTLOADER_DIR = .
 OUTPUT_DIR = $(BOOTLOADER_DIR)/build
+=======
+BOOTLOADER_DIR = $(CURDIR)
+OUTPUT_DIR = $(CURDIR)/build
+>>>>>>> 6afc6e3 (updated)
 EFI_DIR = $(OUTPUT_DIR)/efi
 
 # Source files
 SOURCES = src/main.c
 SOURCES += src/cpu_detect.c
+<<<<<<< HEAD
 SOURCES += src/pci_scan.c
 SOURCES += src/acpi_parse.c
 SOURCES += src/kext_selector.c
@@ -28,6 +34,10 @@ SOURCES += src/efi_builder.c
 SOURCES += src/opencore.c
 SOURCES += src/ui.c
 SOURCES += src/logger.c
+=======
+SOURCES += src/kext_selector.c
+SOURCES += src/boot_menu.c
+>>>>>>> 6afc6e3 (updated)
 
 # Include paths
 INCLUDES = -I$(BOOTLOADER_DIR)/include

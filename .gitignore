@@ -21,4 +21,7 @@ rad.json
 #Test results file
 TestResults.xml
 #builded tetratosh isos
+build/
 *.iso
+*.img
+*.xz

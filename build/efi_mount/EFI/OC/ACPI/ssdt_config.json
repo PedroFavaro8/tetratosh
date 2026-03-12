@@ -1,0 +1,202 @@
+{
+  "ssdt_files": {
+    "Intel": {
+      "SSDT-PLUG.aml": {
+        "description": "CPU Power Management Plugin",
+        "required": true,
+        "target_cpu": "all",
+        "content": "Template - compiled at build time"
+      },
+      "SSDT-EC.aml": {
+        "description": "Embedded Controller",
+        "required": true,
+        "target_cpu": "all"
+      },
+      "SSDT-EC-USBX.aml": {
+        "description": "EC and USB Power",
+        "required": false,
+        "target_cpu": "Skylake+"
+      },
+      "SSDT-PMC.aml": {
+        "description": "PMC Fix",
+        "required": false,
+        "target_cpu": "Skylake+"
+      },
+      "SSDT-AWAC.aml": {
+        "description": "RTC AWAC Fix",
+        "required": false,
+        "target_cpu": "300-series+"
+      },
+      "SSDT-XOSI.aml": {
+        "description": "OSI Workaround",
+        "required": false,
+        "target_cpu": "AMD"
+      },
+      "SSDT-USB-Reset.aml": {
+        "description": "USB Reset",
+        "required": false,
+        "target_cpu": "all"
+      },
+      "SSDT-SBUS.aml": {
+        "description": "SMBus support",
+        "required": false,
+        "target_cpu": "Intel"
+      },
+      "SSDT-MCHC.aml": {
+        "description": "MCHC fix",
+        "required": false,
+        "target_cpu": "Intel"
+      },
+      "SSDT-IMEI.aml": {
+        "description": "Intel ME fix",
+        "required": false,
+        "target_cpu": "Intel"
+      },
+      "SSDT-HDEF.aml": {
+        "description": "Audio HDIF",
+        "required": false,
+        "target_cpu": "all"
+      },
+      "SSDT-GPU.aml": {
+        "description": "GPU Rename",
+        "required": false,
+        "target_cpu": "all"
+      },
+      "SSDT-RHUB.aml": {
+        "description": "USB RHUB",
+        "required": false,
+        "target_cpu": "all"
+      },
+      "SSDT-PNLF.aml": {
+        "description": "Backlight Control",
+        "required": false,
+        "target_cpu": "laptops"
+      },
+      "SSDT-DGPU-OFF.aml": {
+        "description": "Disable dGPU",
+        "required": false,
+        "target_cpu": "laptops"
+      },
+      "SSDT-XHC.aml": {
+        "description": "USB XHC rename",
+        "required": false,
+        "target_cpu": "all"
+      },
+      "SSDT-EGPU.aml": {
+        "description": "eGPU support",
+        "required": false,
+        "target_cpu": "all"
+      },
+      "SSDT-BRG2.aml": {
+        "description": "GPIO fix",
+        "required": false,
+        "target_cpu": "all"
+      }
+    },
+    "AMD": {
+      "SSDT-PLUG.aml": {
+        "description": "CPU Power Management",
+        "required": true,
+        "target_cpu": "AMD"
+      },
+      "SSDT-XOSI.aml": {
+        "description": "OSI workaround",
+        "required": true,
+        "target_cpu": "AMD"
+      },
+      "SSDT-AGESA.aml": {
+        "description": "AMD AGESA fix",
+        "required": false,
+        "target_cpu": "AMD-Zen+"
+      },
+      "SSDT-AMD-CPU-PM.aml": {
+        "description": "AMD CPU Power Management",
+        "required": false,
+        "target_cpu": "AMD"
+      },
+      "SSDT-AMD-RX.aml": {
+        "description": "AMD Radeon RX Fix",
+        "required": false,
+        "target_cpu": "AMD-Polaris+"
+      },
+      "SSDT-USB-Reset.aml": {
+        "description": "USB Reset",
+        "required": false,
+        "target_cpu": "AMD"
+      },
+      "SSDT-EGPU.aml": {
+        "description": "eGPU support",
+        "required": false,
+        "target_cpu": "AMD"
+      }
+    }
+  },
+  
+  "ssdt_patches": {
+    "common_patches": [
+      {
+        "comment": "Rename GFX0 to IGPU",
+        "find": "47465830",
+        "replace": "49475055",
+        "target": "DSDT"
+      },
+      {
+        "comment": "Rename HECI to IMEI",
+        "find": "48454349",
+        "replace": "494D4549",
+        "target": "DSDT"
+      },
+      {
+        "comment": "Rename HDEF to HDAS",
+        "find": "48444546",
+        "replace": "48444153",
+        "target": "DSDT"
+      },
+      {
+        "comment": "Rename EHC1 to EH01",
+        "find": "45484331",
+        "replace": "45483031",
+        "target": "DSDT"
+      },
+      {
+        "comment": "Rename EHC2 to EH02",
+        "find": "45484332",
+        "replace": "45483032",
+        "target": "DSDT"
+      },
+      {
+        "comment": "Rename XHC1 to XHC",
+        "find": "58484331",
+        "replace": "58484320",
+        "target": "DSDT"
+      }
+    ],
+    
+    "cpu_patches": {
+      "SandyBridge": [
+        {
+          "comment": "CPU PM Patch",
+          "find": "00A00F3C",
+          "replace": "00A01B3C",
+          "target": "DSDT"
+        }
+      ],
+      "IvyBridge": [
+        {
+          "comment": "CPU PM Patch",
+          "find": "00A00F3C",
+          "replace": "00A01B3C",
+          "target": "DSDT"
+        }
+      ],
+      "Haswell": [
+        {
+          "comment": "CPU XCPM Patch",
+          "find": "00A00F3C",
+          "replace": "00A01B3C",
+          "target": "DSDT"
+        }
+      ]
+    }
+  }
+}
