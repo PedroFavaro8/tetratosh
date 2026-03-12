@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # TETRATOSH Build Script
-# Compila o bootloader com EDK2
+# Compila o bootloader com Makefile (standalone)
 #
 
 set -e
@@ -11,33 +11,19 @@ echo "TETRATOSH Build System"
 echo "=========================================="
 echo ""
 
-# Verificar EDK2
-if [ ! -d "/tmp/edk2" ]; then
-    echo "ERRO: EDK2 não encontrado em /tmp/edk2"
-    echo "Execute primeiro: ./scripts/setup_edk2.sh"
-    exit 1
-fi
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BOOTLOADER_DIR="$PROJECT_ROOT/bootloader"
+BUILD_DIR="$PROJECT_ROOT/build"
 
-cd /tmp/edk2
-
-# Setup environment
-export WORKSPACE=/tmp/edk2
-export GCC_BIN=$(which gcc)
-source ./edksetup.sh BaseTools
-
-echo "Compilando Tetratosh..."
-echo ""
-
-# Build
-./BaseTools/BinWrappers/PosixLike/build \
-    -p /workspaces/tetratosh/bootloader/Tetratosh.dsc \
-    -a X64 \
-    -b DEBUG \
-    -t GCC \
-    -n 3
+echo "Building with standalone Makefile..."
+cd "$BOOTLOADER_DIR"
+make clean
+make
+mkdir -p "$BUILD_DIR/bootloader"
+cp build/Tetratosh.efi "$BUILD_DIR/bootloader/"
 
 echo ""
 echo "=========================================="
 echo "Build concluído!"
-echo "Resultado em: Build/Tetratosh/"
+echo "Resultado em: $BUILD_DIR/bootloader/Tetratosh.efi"
 echo "=========================================="

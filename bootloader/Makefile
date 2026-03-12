@@ -13,21 +13,21 @@ TOOL_CHAIN = GCC5
 TOOL_CHAIN_TAG = GCC5
 
 # Paths
-BOOTLOADER_DIR = $(CURDIR)/bootloader
-OUTPUT_DIR = $(CURDIR)/build
+BOOTLOADER_DIR = .
+OUTPUT_DIR = $(BOOTLOADER_DIR)/build
 EFI_DIR = $(OUTPUT_DIR)/efi
 
 # Source files
-SOURCES = $(BOOTLOADER_DIR)/src/main.c
-SOURCES += $(BOOTLOADER_DIR)/src/cpu_detect.c
-SOURCES += $(BOOTLOADER_DIR)/src/pci_scan.c
-SOURCES += $(BOOTLOADER_DIR)/src/acpi_parse.c
-SOURCES += $(BOOTLOADER_DIR)/src/kext_selector.c
-SOURCES += $(BOOTLOADER_DIR)/src/config_gen.c
-SOURCES += $(BOOTLOADER_DIR)/src/efi_builder.c
-SOURCES += $(BOOTLOADER_DIR)/src/opencore.c
-SOURCES += $(BOOTLOADER_DIR)/src/ui.c
-SOURCES += $(BOOTLOADER_DIR)/src/logger.c
+SOURCES = src/main.c
+SOURCES += src/cpu_detect.c
+SOURCES += src/pci_scan.c
+SOURCES += src/acpi_parse.c
+SOURCES += src/kext_selector.c
+SOURCES += src/config_gen.c
+SOURCES += src/efi_builder.c
+SOURCES += src/opencore.c
+SOURCES += src/ui.c
+SOURCES += src/logger.c
 
 # Include paths
 INCLUDES = -I$(BOOTLOADER_DIR)/include
@@ -99,8 +99,8 @@ endif
 
 build-all: build-efi
 	@echo "Running download scripts..."
-	@python3 scripts/download_all_kexts.py -v || true
-	@python3 scripts/download_acpi.py -v || true
+	@python3 ../scripts/download_all_keysts.py -v || true
+	@python3 ../scripts/download_acpi.py -v || true
 
 clean:
 	@echo "Cleaning..."

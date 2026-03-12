@@ -16,20 +16,18 @@
 [LibraryClasses]
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
   BaseMemoryLib|MdePkg/Library/BaseMemoryLib/BaseMemoryLib.inf
-  DebugLib|MdePkg/Library/DebugLib/DebugLib.inf
-  PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
+  BaseDebugLibNull|MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
+  BasePcdLibNull|MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
   UefiBootServicesTableLib|MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf
   UefiLib|MdePkg/Library/UefiLib/UefiLib.inf
   UefiDriverEntryPoint|MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint.inf
-  MemoryAllocationLib|MdePkg/Library/DxeMemoryAllocationLib/DxeMemoryAllocationLib.inf
-  DevicePathLib|MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
-  FileSystemLib|MdePkg/Library/DxeFileSystemLib/DxeFileSystemLib.inf
-  PrintLib|MdePkg/Library/BasePrintLib/BasePrintLib.inf
-  StringLib|MdePkg/Library/BaseStringLib/BaseStringLib.inf
+  UefiDevicePathLib|MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
+  BasePrintLib|MdePkg/Library/BasePrintLib/BasePrintLib.inf
+  BaseStringLib|MdePkg/Library/BaseStringLib/BaseStringLib.inf
 
 [LibraryClasses.common.UEFI_DRIVER]
   MemoryInitLib|MdeModulePkg/Library/MemoryInitLib/MemoryInitLib.inf
 
 [Components]
   # Main Bootloader Driver
-  Tetratosh/TetratoshDriver.inf
+  /workspaces/tetratosh/bootloader/TetratoshDriver.inf
