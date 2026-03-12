@@ -2,6 +2,8 @@
 
 # credits for opencore project because i use opencore on the chainload
 
+# anyone if want: please help to construct and build the project opening a pull request
+
 Automated Hackintosh Bootloader - A fully automatic bootloader that prepares a Hackintosh environment before launching OpenCore.
 
 ## Build Status
