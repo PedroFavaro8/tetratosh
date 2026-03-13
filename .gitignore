@@ -20,6 +20,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#linker script files
+*.ld
 #builded tetratosh isos
 build/
 *.iso
