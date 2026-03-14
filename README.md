@@ -1,5 +1,8 @@
 # TETRATOSH
 
+[![Build Status](https://github.com/acidanthera/OpenCorePkg/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/acidanthera/OpenCorePkg/actions) [![Scan Status](https://scan.coverity.com/projects/18169/badge.svg?flat=1)](https://scan.coverity.com/projects/18169)
+-----
+
 # credits for opencore project because i use opencore on the chainload
 
 # anyone if want: please help to construct and build the project opening a pull request
